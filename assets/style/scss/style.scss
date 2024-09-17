@@ -1,1 +1,344 @@
 @use "forward" as fw;
+
+/* HEADER */
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3faff;
+  border-bottom: 0.5px dashed #bd9655;
+  .header-wrapper {
+    padding: 0px 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > :first-child {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      a {
+        background-image: url(/assets/image/figure/foto01.jpeg);
+        background-position: 50% 20%;
+        background-repeat: no-repeat;
+        background-size: 70px;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        margin-top: 5px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    > .button-contact {
+      box-shadow: 2px 2px 0px 0px #333333;
+      border-radius: 5px;
+      width: 150px;
+      > a {
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        background-color: #ffffff;
+        // background-color: #404d6c;
+        border: 1px solid #333333;
+        transition: all 0.2s ease-in;
+        > .fa-whatsapp {
+          font-size: 22px;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: #f3faff;
+          color: #333333;
+          transform: translate(2px, 2px);
+        }
+      }
+    }
+  }
+}
+/* MAIN */
+.main {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  .main-wrapper {
+    max-width: 1250px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .main-container {
+      padding: 100px;
+      p {
+        max-width: 650px;
+        font-size: 24px;
+        span {
+          font-weight: 800;
+          font-size: 26px;
+          color: #3c5e8b;
+        }
+        strong {
+          color: #3c5e8b;
+        }
+      }
+      h1 {
+        font-size: 52px;
+        font-weight: 600;
+      }
+      :nth-child(4) {
+        padding: 30px 0px;
+        display: flex;
+        gap: 50px;
+        .fa-location-dot,
+        .fa-square-check {
+          color: #3c5e8b;
+          margin-right: 10px;
+        }
+      }
+      > .button-contact {
+        box-shadow: 2px 2px 0px 0px #333333;
+        border-radius: 5px;
+        width: 300px;
+        > a {
+          cursor: pointer;
+          border-radius: 5px;
+          width: 100%;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          font-weight: 400;
+          text-decoration: none;
+          background-color: #404d6c;
+          border: 1px solid #333333;
+          transition: all 0.2s ease-in;
+          > .fa-whatsapp {
+            font-size: 22px;
+            margin-right: 10px;
+            color: #ffffff;
+          }
+          > p {
+            color: #ffffff;
+          }
+          &:hover {
+            background-color: #f3faff;
+            color: #333333;
+            transform: translate(2px, 2px);
+          }
+        }
+        & a:hover p,
+        & a:hover .fa-whatsapp {
+          transition: all 0.2s ease-in;
+          color: #333333;
+        }
+      }
+    }
+  }
+}
+/* PORTIFOLIO */
+.portifolio {
+  display: flex;
+  justify-content: center;
+  border-top: 0.5px dashed #bd9655;
+  padding-bottom: 150px;
+  .portifolio-wrapper {
+    padding: 0px 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      text-align: center;
+      margin-top: -35px;
+      color: #ffffff;
+      font-size: 52px;
+      line-height: 1.2em;
+      -webkit-text-stroke-width: 2px;
+      stroke-width: 2px;
+      -webkit-text-stroke-color: #333333;
+      stroke: #333333;
+      text-shadow: 4px 4px 0px #3c5e8b;
+      background-color: #ffffff;
+      width: 280px;
+    }
+    > p {
+      text-indent: 20px;
+      padding: 20px;
+      border-left: 0.1px dashed #bd9655;
+      margin-bottom: 30px;
+      span {
+        font-weight: 800;
+        color: #3c5e8b;
+      }
+    }
+    .portifolio-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      .box {
+        position: relative;
+        border-radius: 5px;
+        width: 100%;
+        min-width: 200px;
+        max-width: 300px;
+        height: 100%;
+        min-height: 300px;
+        border: 1px solid #333333;
+        box-shadow: 2px 2px 0px 0px #404d6c;
+        a {
+          display: block;
+          height: 300px;
+          background-color: rgba(208, 255, 0, 0.336);
+        }
+        > div {
+          width: 100%;
+          padding: 10px 15px;
+          position: absolute;
+          bottom: 0;
+          background-color: #ffffff;
+          border-top: 1px solid #333333;
+          display: flex;
+          align-items: center;
+          > div {
+            width: 100%;
+            p {
+              font-weight: 500;
+              line-height: 1;
+            }
+            span {
+              font-weight: 300;
+              font-style: italic;
+              font-size: 14px;
+            }
+          }
+          a {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background-color: #404d6c;
+            border: 1px solid #333333;
+            border-radius: 3px;
+            box-shadow: 1px 1px 0px 0px #333333;
+
+            .fa-chevron-right {
+              color: #ffffff;
+              padding: 8px;
+              font-size: 18px;
+              line-height: 30px;
+            }
+          }
+          & a:hover {
+            transition: all 0.1s ease-in;
+            transform: translate(1px, 1px);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+/* TECH */
+.tech {
+  display: flex;
+  justify-content: center;
+  border-top: 0.5px dashed #bd9655;
+  padding-bottom: 50px;
+  .tech-wrapper {
+    padding: 0px 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1250px;
+    display: flex;
+    justify-content: center;
+    .title {
+      text-align: center;
+      margin-top: -35px;
+      color: #ffffff;
+      font-size: 52px;
+      line-height: 1.2em;
+      -webkit-text-stroke-width: 2px;
+      stroke-width: 2px;
+      -webkit-text-stroke-color: #333333;
+      stroke: #333333;
+      text-shadow: 4px 4px 0px #3c5e8b;
+      background-color: #ffffff;
+      width: 360px;
+    }
+  }
+}
+/* FOOTER */
+footer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f3faff;
+  border-top: 0.2px dashed #bd9655;
+  .medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      img {
+        width: 35px;
+        height: 35px;
+        border: 1px solid rgb(107, 107, 107);
+        padding: 7px;
+        border-radius: 50%;
+        filter: grayscale(1) contrast(1);
+        transition: all 0.3s ease-out;
+        &:hover {
+          transition: all 0.3s ease-out;
+          filter: grayscale(0) contrast(1);
+          border: 1pt solid rgb(78, 78, 78);
+        }
+      }
+    }
+  }
+  > :last-child {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #000000b9;
+
+    a {
+      cursor: pointer;
+      color: #bd9655;
+      text-decoration: none;
+      letter-spacing: 0px;
+      margin-left: 7px;
+    }
+  }
+}
