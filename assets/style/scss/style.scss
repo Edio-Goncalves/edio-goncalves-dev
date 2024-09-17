@@ -130,7 +130,7 @@ header {
           font-size: 18px;
           font-weight: 400;
           text-decoration: none;
-          background-color: #404d6c;
+          background-color: #3c5e8b;
           border: 1px solid #333333;
           transition: all 0.2s ease-in;
           > .fa-whatsapp {
@@ -213,7 +213,7 @@ header {
         a {
           display: block;
           height: 300px;
-          background-color: rgba(208, 255, 0, 0.336);
+          background-color: rgba(189, 151, 85, 0.3);
         }
         > div {
           width: 100%;
@@ -277,7 +277,9 @@ header {
     height: 100%;
     max-width: 1250px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     .title {
       text-align: center;
       margin-top: -35px;
@@ -291,6 +293,11 @@ header {
       text-shadow: 4px 4px 0px #3c5e8b;
       background-color: #ffffff;
       width: 360px;
+    }
+    .tech-content {
+      background-color: red;
+      display: flex;
+      align-items: center;
     }
   }
 }
