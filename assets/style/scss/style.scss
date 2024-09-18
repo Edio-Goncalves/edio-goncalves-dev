@@ -68,6 +68,7 @@ header {
         margin-top: 5px;
         font-size: 14px;
         color: rgba(0, 0, 0, 0.25);
+        font-style: italic;
       }
     }
 
@@ -141,7 +142,7 @@ header {
         gap: 50px;
         .fa-location-dot,
         .fa-square-check {
-          color: #94c1ff;
+          color: #3c5e8b;
           margin-right: 10px;
         }
       }
@@ -381,7 +382,7 @@ header {
   display: flex;
   justify-content: center;
   border-top: 0.5px dashed #bd9655;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 
   .tech-wrapper {
     width: 100%;
@@ -487,6 +488,97 @@ header {
         &:hover .fa-html5,
         &:hover .teste.p {
           color: #e34f26;
+        }
+      }
+    }
+  }
+}
+
+/* CONTACT */
+.contact {
+  display: flex;
+  justify-content: center;
+  border-top: 0.5px dashed #bd9655;
+  padding-bottom: 90px;
+
+  .contact-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1250px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+
+    .title {
+      text-align: center;
+      margin-top: -35px;
+      color: #ffffff;
+      font-size: 52px;
+      line-height: 1.2em;
+      -webkit-text-stroke-width: 2px;
+      stroke-width: 2px;
+      -webkit-text-stroke-color: #3c5e8b;
+      stroke: #333333;
+      text-shadow: 4px 4px 0px #94c1ff;
+      background-color: #ffffff;
+      width: 270px;
+    }
+    .contact-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 50px;
+      > :first-child {
+        max-width: 550px;
+        h3 {
+          font-size: 26px;
+          margin-bottom: 10px;
+          span {
+            color: #3c5e8b;
+          }
+        }
+      }
+      .button-contact {
+        box-shadow: 4px 4px 0px 0px #94c1ff;
+        border-radius: 5px;
+        width: 300px;
+        > a {
+          cursor: pointer;
+          border-radius: 5px;
+          width: 100%;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          font-weight: 400;
+          text-decoration: none;
+          background-color: #ffffff;
+          border: 1px solid #3c5e8b;
+          transition: all 0.2s ease-in;
+          > .fa-whatsapp {
+            font-size: 22px;
+            margin-right: 10px;
+            color: #333333;
+          }
+          > p {
+            color: #333333;
+          }
+          &:hover {
+            background-color: #ffffff;
+            color: #333333;
+            transform: translate(4px, 4px);
+          }
+        }
+        & a:hover p,
+        & a:hover .fa-whatsapp {
+          transition: all 0.2s ease-in;
+          color: #333333;
         }
       }
     }
