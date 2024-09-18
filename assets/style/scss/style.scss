@@ -5,23 +5,20 @@
   position: fixed;
   width: 80px;
   height: 300vh;
-  background-color: #f3faff;
-  border-right: 0.2px dashed #bd9655;
+  background-color: fw.$bg-color;
+  border-right: 0.2px dashed fw.$third-color;
   z-index: 3;
 }
 
 .left-cube {
   z-index: 6;
   position: fixed;
-  display: block;
   height: 80px;
   width: 80px;
-  border-right: 0.2px dashed #bd9655;
-  border-bottom: 0.2px dashed #bd9655;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+  @include fw.flex-center;
+  border-right: 0.2px dashed fw.$third-color;
+  border-bottom: 0.2px dashed fw.$third-color;
+  background-color: fw.$white-color;
   img {
     width: 40px;
     opacity: 0.6;
@@ -34,11 +31,9 @@ header {
   position: fixed;
   width: 100%;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f3faff;
-  border-bottom: 0.5px dashed #bd9655;
+  @include fw.flex-center;
+  background-color: fw.$bg-color;
+  border-bottom: 0.5px dashed fw.$third-color;
   .header-wrapper {
     width: 100%;
     height: 100%;
@@ -60,9 +55,7 @@ header {
         background-size: 70px;
         width: 55px;
         height: 55px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include fw.flex-center;
         border-radius: 50%;
       }
       .name-content {
@@ -70,11 +63,11 @@ header {
         align-items: center;
         gap: 10px;
         h2 {
-          font-size: 20px;
+          font-size: fw.$font-size-x-large;
         }
         p {
           margin-top: 5px;
-          font-size: 14px;
+          font-size: fw.$font-size-medium;
           color: rgba(0, 0, 0, 0.25);
           font-style: italic;
         }
@@ -82,22 +75,20 @@ header {
     }
 
     > .button-contact {
-      box-shadow: 3px 3px 0px 0px #94c1ff;
+      box-shadow: 3px 3px 0px 0px fw.$secondary-color;
       border-radius: 5px;
       width: 150px;
       > a {
         cursor: pointer;
         width: 100%;
         padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
+        @include fw.flex-center;
+        font-size: fw.$font-size-large;
         font-weight: 400;
         text-decoration: none;
-        background-color: #ffffff;
+        background-color: fw.$white-color;
         border-radius: 5px;
-        border: 1px solid #333333;
+        border: 1px solid fw.$black-color;
         transition: all 0.2s ease-in;
         > .fa-whatsapp {
           font-size: 22px;
@@ -105,8 +96,8 @@ header {
         }
 
         &:hover {
-          background-color: #f3faff;
-          color: #333333;
+          background-color: fw.$bg-color;
+          color: fw.$black-color;
           transform: translate(3px, 3px);
         }
       }
@@ -152,18 +143,18 @@ header {
       padding-left: 30px;
       p {
         max-width: 600px;
-        font-size: 24px;
+        font-size: fw.$font-size-xx-large;
         span {
           font-weight: 800;
-          font-size: 26px;
-          color: #3c5e8b;
+          font-size: fw.$font-size-xxx-large;
+          color: fw.$primary-color;
         }
         strong {
-          color: #3c5e8b;
+          color: fw.$primary-color;
         }
       }
       h1 {
-        font-size: 52px;
+        font-size: fw.$font-size-header;
         font-weight: 600;
       }
       :nth-child(4) {
@@ -172,12 +163,12 @@ header {
         gap: 50px;
         .fa-location-dot,
         .fa-square-check {
-          color: #3c5e8b;
+          color: fw.$primary-color;
           margin-right: 10px;
         }
       }
       > .button-contact {
-        box-shadow: 4px 4px 0px 0px #94c1ff;
+        box-shadow: 4px 4px 0px 0px fw.$secondary-color;
         border-radius: 5px;
         width: 300px;
         > a {
@@ -185,33 +176,31 @@ header {
           border-radius: 5px;
           width: 100%;
           padding: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 18px;
+          @include fw.flex-center;
+          font-size: fw.$font-size-large;
           font-weight: 400;
           text-decoration: none;
-          background-color: #ffffff;
-          border: 1px solid #3c5e8b;
+          background-color: fw.$white-color;
+          border: 1px solid fw.$primary-color;
           transition: all 0.2s ease-in;
           > .fa-whatsapp {
             font-size: 22px;
             margin-right: 10px;
-            color: #333333;
+            color: fw.$black-color;
           }
           > p {
-            color: #333333;
+            color: fw.$black-color;
           }
           &:hover {
-            background-color: #ffffff;
-            color: #333333;
+            background-color: fw.$white-color;
+            color: fw.$black-color;
             transform: translate(4px, 4px);
           }
         }
         & a:hover p,
         & a:hover .fa-whatsapp {
           transition: all 0.2s ease-in;
-          color: #333333;
+          color: fw.$black-color;
         }
       }
     }
@@ -234,17 +223,17 @@ header {
     .main-wrapper {
       .main-container {
         p {
-          font-size: 18px;
+          font-size: fw.$font-size-large;
         }
         h1 {
-          font-size: 38px;
+          font-size: fw.$font-size-title;
           line-height: 1.1;
           font-weight: 700;
         }
         :nth-child(4) {
           gap: 20px;
           span {
-            font-size: 12px;
+            font-size: fw.$font-size-small;
           }
         }
       }
@@ -267,9 +256,9 @@ header {
         padding: 0px;
         padding: 20px;
         p {
-          font-size: 16px;
+          font-size: fw.$font-size-regular;
           span {
-            font-size: 18px;
+            font-size: fw.$font-size-large;
           }
         }
         h1 {
@@ -299,7 +288,7 @@ header {
 .portifolio {
   display: flex;
   justify-content: center;
-  border-top: 0.5px dashed #bd9655;
+  border-top: 0.5px dashed fw.$third-color;
   padding-bottom: 150px;
   .portifolio-wrapper {
     margin-left: 80px;
@@ -307,34 +296,33 @@ header {
     width: 100%;
     height: 100%;
     max-width: 1250px;
-    display: flex;
-    justify-content: center;
+    @include fw.flex-center;
     flex-direction: column;
-    align-items: center;
+
     .title {
       padding-bottom: 30px;
       width: 280px;
       margin-top: -35px;
       align-self: baseline;
       text-align: center;
-      color: #ffffff;
-      font-size: 52px;
+      color: fw.$white-color;
+      font-size: fw.$font-size-header;
       line-height: 1.2em;
       -webkit-text-stroke-width: 2px;
       stroke-width: 2px;
-      -webkit-text-stroke-color: #3c5e8b;
-      stroke: #333333;
-      text-shadow: 4px 4px 0px #94c1ff;
-      background-color: #ffffff;
+      -webkit-text-stroke-color: fw.$primary-color;
+      stroke: fw.$black-color;
+      text-shadow: 4px 4px 0px fw.$secondary-color;
+      background-color: fw.$white-color;
     }
     > p {
       text-indent: 20px;
       padding: 20px;
-      border-left: 0.1px dashed #bd9655;
+      border-left: 0.1px dashed fw.$third-color;
       margin-bottom: 30px;
       span {
         font-weight: 800;
-        color: #3c5e8b;
+        color: fw.$primary-color;
       }
     }
     .portifolio-content {
@@ -350,8 +338,8 @@ header {
         max-width: 292px;
         height: 100%;
         min-height: 300px;
-        border: 1px solid #333333;
-        box-shadow: 2px 2px 0px 0px #94c1ff;
+        border: 1px solid fw.$black-color;
+        box-shadow: 2px 2px 0px 0px fw.$secondary-color;
         a {
           display: block;
           height: 300px;
@@ -362,8 +350,8 @@ header {
           padding: 10px 15px;
           position: absolute;
           bottom: 0;
-          background-color: #ffffff;
-          border-top: 1px solid #333333;
+          background-color: fw.$white-color;
+          border-top: 1px solid fw.$black-color;
           display: flex;
           align-items: center;
           > div {
@@ -375,25 +363,23 @@ header {
             span {
               font-weight: 300;
               font-style: italic;
-              font-size: 14px;
+              font-size: fw.$font-size-medium;
             }
           }
           a {
             width: 30px;
             height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include fw.flex-center;
             text-decoration: none;
-            background-color: #94c1ff;
-            border: 1px solid #333333;
+            background-color: fw.$secondary-color;
+            border: 1px solid fw.$black-color;
             border-radius: 3px;
-            box-shadow: 1px 1px 0px 0px #333333;
+            box-shadow: 1px 1px 0px 0px fw.$black-color;
 
             .fa-chevron-right {
-              color: #ffffff;
+              color: fw.$white-color;
               padding: 8px;
-              font-size: 18px;
+              font-size: fw.$font-size-large;
               line-height: 30px;
             }
           }
@@ -427,42 +413,41 @@ header {
 .process {
   display: flex;
   justify-content: center;
-  border-top: 0.5px dashed #bd9655;
+  border-top: 0.5px dashed fw.$third-color;
   padding-bottom: 150px;
   .process-wrapper {
-    margin-left: 80px;
-    padding: 0px 20px;
+    max-width: 1250px;
     width: 100%;
     height: 100%;
-    max-width: 1250px;
-    display: flex;
-    justify-content: center;
+    margin-left: 80px;
+    padding: 0px 20px;
+    @include fw.flex-center;
     flex-direction: column;
-    align-items: center;
+
     .title {
       padding-bottom: 30px;
       align-self: baseline;
       text-align: center;
       margin-top: -35px;
-      color: #ffffff;
-      font-size: 52px;
+      color: fw.$white-color;
+      font-size: fw.$font-size-header;
       line-height: 1.2em;
       -webkit-text-stroke-width: 2px;
       stroke-width: 2px;
-      -webkit-text-stroke-color: #3c5e8b;
-      stroke: #333333;
-      text-shadow: 4px 4px 0px #94c1ff;
-      background-color: #ffffff;
+      -webkit-text-stroke-color: fw.$primary-color;
+      stroke: fw.$black-color;
+      text-shadow: 4px 4px 0px fw.$secondary-color;
+      background-color: fw.$white-color;
       width: 320px;
     }
     > p {
       text-indent: 20px;
       padding: 20px;
-      border-left: 0.1px dashed #bd9655;
+      border-left: 0.1px dashed fw.$third-color;
       margin-bottom: 30px;
       span {
         font-weight: 800;
-        color: #3c5e8b;
+        color: fw.$primary-color;
       }
     }
     .process-content {
@@ -481,21 +466,21 @@ header {
         }
         > :last-child {
           h3 {
-            font-size: 20px;
-            color: #333;
+            font-size: fw.$font-size-x-large;
+            color: fw.$black-color;
             font-weight: 600;
             margin-bottom: 10px;
             span {
-              color: #3c5e8b;
+              color: fw.$primary-color;
               margin-right: 5px;
               font-weight: 800;
             }
           }
           > p {
-            font-size: 16px;
+            font-size: fw.$font-size-regular;
             line-height: 1.3;
             span {
-              color: #3c5e8b;
+              color: fw.$primary-color;
               font-weight: 500;
             }
           }
@@ -522,7 +507,7 @@ header {
 .tech {
   display: flex;
   justify-content: center;
-  border-top: 0.5px dashed #bd9655;
+  border-top: 0.5px dashed fw.$third-color;
   padding-bottom: 100px;
   .tech-wrapper {
     margin-left: 80px;
@@ -530,10 +515,9 @@ header {
     height: 100%;
     max-width: 1250px;
     padding: 0px 20px;
-    display: flex;
+    @include fw.flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     gap: 50px;
     position: relative;
 
@@ -542,29 +526,27 @@ header {
       align-self: baseline;
       text-align: center;
       margin-top: -35px;
-      color: #ffffff;
-      font-size: 52px;
+      color: fw.$white-color;
+      font-size: fw.$font-size-header;
       line-height: 1.2em;
       -webkit-text-stroke-width: 2px;
       stroke-width: 2px;
-      -webkit-text-stroke-color: #3c5e8b;
-      stroke: #333333;
-      text-shadow: 4px 4px 0px #94c1ff;
-      background-color: #ffffff;
+      -webkit-text-stroke-color: fw.$primary-color;
+      stroke: fw.$black-color;
+      text-shadow: 4px 4px 0px fw.$secondary-color;
+      background-color: fw.$white-color;
       width: 590px;
     }
 
     .tech-content {
       cursor: pointer;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include fw.flex-center;
       flex-wrap: wrap;
       width: 100%;
       gap: 30px;
       .tech-box {
-        box-shadow: 3px 3px 0px 0px #94c1ff;
+        box-shadow: 3px 3px 0px 0px fw.$secondary-color;
         border-radius: 5px;
         height: 120px;
         width: 105px;
@@ -574,33 +556,31 @@ header {
           height: 100%;
           width: 100%;
           padding: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include fw.flex-center;
           flex-direction: column;
           font-weight: 400;
           text-decoration: none;
           text-align: center;
-          border: 1px solid #333333;
+          border: 1px solid fw.$black-color;
           transition: all 0.2s ease-in;
           p {
-            font-size: 16px;
+            font-size: fw.$font-size-regular;
             margin-top: 5px;
-            color: #94c1ff;
+            color: fw.$secondary-color;
             transition: all 0.2s ease-in;
           }
           > .fa-brands {
             font-size: 55px;
-            color: #94c1ff;
+            color: fw.$secondary-color;
             transition: all 0.2s ease-in;
           }
 
           &:hover {
-            background-color: #ffffff;
-            color: #333333;
+            background-color: fw.$white-color;
+            color: fw.$black-color;
             transform: translate(3px, 3px);
             p {
-              color: #333;
+              color: fw.$black-color;
               font-weight: 500;
             }
             .fa-html5 {
@@ -651,7 +631,7 @@ header {
 .contact {
   display: flex;
   justify-content: center;
-  border-top: 0.5px dashed #bd9655;
+  border-top: 0.5px dashed fw.$third-color;
   padding-bottom: 90px;
 
   .contact-wrapper {
@@ -660,10 +640,9 @@ header {
     height: 100%;
     max-width: 1250px;
     padding: 0px 20px;
-    display: flex;
+    @include fw.flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     gap: 50px;
     position: relative;
 
@@ -672,15 +651,15 @@ header {
       align-self: baseline;
       text-align: center;
       margin-top: -35px;
-      color: #ffffff;
-      font-size: 52px;
+      color: fw.$white-color;
+      font-size: fw.$font-size-header;
       line-height: 1.2em;
       -webkit-text-stroke-width: 2px;
       stroke-width: 2px;
-      -webkit-text-stroke-color: #3c5e8b;
-      stroke: #333333;
-      text-shadow: 4px 4px 0px #94c1ff;
-      background-color: #ffffff;
+      -webkit-text-stroke-color: fw.$primary-color;
+      stroke: fw.$black-color;
+      text-shadow: 4px 4px 0px fw.$secondary-color;
+      background-color: fw.$white-color;
       width: 270px;
     }
     .contact-content {
@@ -692,15 +671,15 @@ header {
       > :first-child {
         max-width: 550px;
         h3 {
-          font-size: 26px;
+          font-size: fw.$font-size-xxx-large;
           margin-bottom: 10px;
           span {
-            color: #3c5e8b;
+            color: fw.$primary-color;
           }
         }
       }
       .button-contact {
-        box-shadow: 4px 4px 0px 0px #94c1ff;
+        box-shadow: 4px 4px 0px 0px fw.$secondary-color;
         border-radius: 5px;
         width: 300px;
         > a {
@@ -708,33 +687,31 @@ header {
           border-radius: 5px;
           width: 100%;
           padding: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 18px;
+          @include fw.flex-center;
+          font-size: fw.$font-size-large;
           font-weight: 400;
           text-decoration: none;
-          background-color: #ffffff;
-          border: 1px solid #3c5e8b;
+          background-color: fw.$white-color;
+          border: 1px solid fw.$primary-color;
           transition: all 0.2s ease-in;
           > .fa-whatsapp {
             font-size: 22px;
             margin-right: 10px;
-            color: #333333;
+            color: fw.$black-color;
           }
           > p {
-            color: #333333;
+            color: fw.$black-color;
           }
           &:hover {
-            background-color: #ffffff;
-            color: #333333;
+            background-color: fw.$white-color;
+            color: fw.$black-color;
             transform: translate(4px, 4px);
           }
         }
         & a:hover p,
         & a:hover .fa-whatsapp {
           transition: all 0.2s ease-in;
-          color: #333333;
+          color: fw.$black-color;
         }
       }
     }
@@ -764,8 +741,8 @@ footer {
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: #f3faff;
-  border-top: 0.2px dashed #bd9655;
+  background-color: fw.$bg-color;
+  border-top: 0.2px dashed fw.$third-color;
   .footer-wrapper {
     position: relative;
     width: 100%;
@@ -773,9 +750,7 @@ footer {
     gap: 20px;
 
     .medias {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include fw.flex-center;
       gap: 20px;
 
       a {
@@ -805,7 +780,7 @@ footer {
 
       a {
         cursor: pointer;
-        color: #bd9655;
+        color: fw.$third-color;
         text-decoration: none;
         letter-spacing: 0px;
         margin-left: 7px;
@@ -820,19 +795,17 @@ footer {
       a {
         width: 35px;
         height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include fw.flex-center;
         text-decoration: none;
-        background-color: #3c5e8b;
-        border: 1px solid #333333;
+        background-color: fw.$primary-color;
+        border: 1px solid fw.$black-color;
         border-radius: 3px;
-        box-shadow: -1px 1px 0px 0px #333333;
+        box-shadow: -1px 1px 0px 0px fw.$black-color;
 
         .fa-chevron-right {
-          color: #ffffff;
+          color: fw.$white-color;
           padding: 8px;
-          font-size: 18px;
+          font-size: fw.$font-size-large;
           line-height: 30px;
         }
       }
@@ -868,7 +841,7 @@ footer {
           }
           p {
             margin: 0;
-            font-size: 12px;
+            font-size: fw.$font-size-small;
           }
         }
       }
@@ -884,9 +857,9 @@ footer {
         padding: 0px;
         padding: 20px;
         p {
-          font-size: 16px;
+          font-size: fw.$font-size-regular;
           span {
-            font-size: 18px;
+            font-size: fw.$font-size-large;
           }
         }
       }
