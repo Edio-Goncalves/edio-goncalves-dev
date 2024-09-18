@@ -30,4 +30,52 @@
     grid-area: six;
     border-left: 0.1px dashed #bd9655;
   }
+
+  @media (max-width: 1055px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "one two"
+      " three four "
+      "five six";
+
+    > :nth-child(3) {
+      border-left: none;
+    }
+    > :nth-child(4) {
+      border-left: 0.1px dashed #bd9655;
+      border-bottom: 0.1px dashed #bd9655;
+    }
+    > :nth-child(5) {
+      grid-area: five;
+      border-left: none;
+    }
+    > :nth-child(6) {
+      grid-area: six;
+      border-left: 0.1px dashed #bd9655;
+    }
+  }
+  @media (max-width: 733px) {
+    display: flex;
+    flex-direction: column;
+    > :nth-child(2) {
+      border-left: none;
+    }
+    > :nth-child(3) {
+      border-left: none;
+    }
+    > :nth-child(4) {
+      border-left: none;
+      border-bottom: 0.1px dashed #bd9655;
+    }
+    > :nth-child(5) {
+      grid-area: five;
+      border-left: none;
+      border-bottom: 0.1px dashed #bd9655;
+    }
+    > :nth-child(6) {
+      grid-area: six;
+      border-left: none;
+    }
+  }
 }
