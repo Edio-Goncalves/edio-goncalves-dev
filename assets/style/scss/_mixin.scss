@@ -1,0 +1,33 @@
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "one two three"
+    "four five six";
+
+  > :nth-child(1) {
+    grid-area: one;
+    border-bottom: 0.1px dashed #bd9655;
+  }
+  > :nth-child(2) {
+    grid-area: two;
+    border-left: 0.1px dashed #bd9655;
+    border-bottom: 0.1px dashed #bd9655;
+  }
+  > :nth-child(3) {
+    grid-area: three;
+    border-left: 0.1px dashed #bd9655;
+    border-bottom: 0.1px dashed #bd9655;
+  }
+  > :nth-child(4) {
+    grid-area: four;
+  }
+  > :nth-child(5) {
+    grid-area: five;
+    border-left: 0.1px dashed #bd9655;
+  }
+  > :nth-child(6) {
+    grid-area: six;
+    border-left: 0.1px dashed #bd9655;
+  }
+}
