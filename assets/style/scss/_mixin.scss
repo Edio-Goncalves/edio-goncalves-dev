@@ -85,3 +85,8 @@
   align-items: center;
   justify-content: center;
 }
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

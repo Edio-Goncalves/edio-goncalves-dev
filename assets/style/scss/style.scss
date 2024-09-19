@@ -41,9 +41,7 @@ header {
     margin-right: 80px;
     margin-left: 80px;
     max-width: 1250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include fw.flex-space-between;
     > :first-child {
       display: flex;
       align-items: center;
@@ -136,9 +134,7 @@ header {
     max-width: 1250px;
     margin-left: 80px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include fw.flex-space-between;
     .main-container {
       padding-left: 30px;
       p {
