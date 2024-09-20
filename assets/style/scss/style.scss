@@ -337,10 +337,37 @@ header {
         border: 1px solid fw.$black-color;
         box-shadow: 2px 2px 0px 0px fw.$secondary-color;
         a {
+          overflow: hidden;
           display: block;
-          height: 300px;
-          background-color: rgba(189, 151, 85, 0.3);
+          height: 250px;
+          display: flex;
+          justify-content: center;
+          background-color: fw.$secondary-color;
+          img {
+            padding: 3px;
+            width: 290px;
+            height: 240px;
+            border-radius: 5px;
+          }
+          .todo-link {
+            width: 390px;
+          }
         }
+        .img-mobile {
+          overflow: hidden;
+          position: absolute;
+          width: 90px;
+          height: 180px;
+          display: block;
+          border: 2px solid fw.$secondary-color;
+          bottom: 70px;
+          right: 10px;
+          border-radius: 7px;
+          img {
+            width: 86px;
+          }
+        }
+
         > div {
           width: 100%;
           padding: 10px 15px;
