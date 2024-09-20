@@ -2,7 +2,7 @@
 
 Este repositório contém o código-fonte de um portfólio pessoal desenvolvido com **HTML** e **SASS**. O objetivo principal deste projeto é apresentar minhas habilidades como desenvolvedor front-end, destacando a implementação de layouts responsivos e estilizações avançadas utilizando SASS.
 
-![Cover](./assets/image/Captura%20de%20tela%202024-08-23%20211322.png)
+![Cover](./assets/image/bg/tela01.png.png)
 
 ## Tecnologias Utilizadas
 
