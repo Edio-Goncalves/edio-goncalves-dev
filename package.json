@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npx serve .",
+    "start": "./node_modules/.bin/serve .",
     "sass": "sass --watch --style=compressed assets/style/scss:assets/style/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
